@@ -30,6 +30,13 @@ export default defineConfig({
       '@': resolve(__dirname, 'src') // 设置 `@` 指向 `src` 目录
     }
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/styles/variable.scss";`
+      }
+    }
+  },
   base: './', // 设置打包路径
   server: {
     port: 4500, // 设置服务启动端口号
